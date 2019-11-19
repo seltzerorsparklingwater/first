@@ -63,15 +63,12 @@ class Map
     end
 
     def get(key)
-
-        found = false
         @map_arr.each_with_index do |pair, idx|
             if pair[0] == key
-                found = true
                 return pair[1]
             end
         end
-        return nil if !found
+        return nil
     end
 
     def delete(key)
